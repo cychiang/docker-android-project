@@ -1,5 +1,5 @@
 # based on https://registry.hub.docker.com/u/samtstern/android-sdk/dockerfile/ with openjdk-8
-FROM java:openjdk-7-jdk
+FROM java:7-jdk
 
 MAINTAINER Naoki AINOYA <ainonic@gmail.com>
 
