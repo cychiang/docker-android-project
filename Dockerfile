@@ -1,5 +1,5 @@
 # based on https://registry.hub.docker.com/u/samtstern/android-sdk/dockerfile/ with openjdk-8
-FROM java:7-jdk
+FROM java:openjdk-7-jdk
 
 MAINTAINER Naoki AINOYA <ainonic@gmail.com>
 
@@ -27,7 +27,7 @@ ENV PATH ${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools:$PATH
 # Install Android SDK components
 
 ONBUILD COPY android_sdk_components.env /android_sdk_components.env
-ONBUILD RUN (while :; do echo 'y'; sleep 3; done) | android update sdk --no-ui --all --filter "$(cat /android_sdk_components.env)"
+ONBUILD RUN (while :; do echo 'y'; sleep 3; done) | android update sdk --no-ui --all --filter "$(cat ./android_sdk_components.env)"
 
 # Support Gradle
 ENV TERM dumb
