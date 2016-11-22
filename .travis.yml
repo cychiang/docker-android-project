@@ -1,0 +1,12 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build --quiet=true -t $DOCKER_USERNAME/docker-android-project .
+
+after_success:
+  - docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - export REPO=$DOCKER_USERNAME/docker-android-project:latest
+  - docker push $REPO

@@ -7,11 +7,12 @@ No `ant`, `maven`, nor `android-ndk` are included.
 
 * JDK 8
 * Android SDK with android support libraries and google play services
+* [Gradle 3.2](https://services.gradle.org/distributions/gradle-3.2-bin.zip)
 
 # License
 
-This repository forked from [gfx/docker-android-project](https://github.com/gfx/docker-android-project) authored by
+This repository forked from [ainoya/docker-android-project](https://github.com/ainoya/docker-android-project) authored by
 
-FUJI Goro (gfx) <g.psy.va+github@gmail.com>
+Naoki Ainoya (ainoya) <ainonic@gmail.com>
 
 http://www.apache.org/licenses/LICENSE-2.0
